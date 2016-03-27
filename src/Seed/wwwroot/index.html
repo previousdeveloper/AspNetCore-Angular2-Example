@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <base href="/">
+    <link href="/lib/css/bootstrap.css" rel="stylesheet" />
+    <link href="/lib/css/jquery.fancybox.css" rel="stylesheet" />
+    <link href="/css/site.css" rel="stylesheet" />
+    <link href="/lib/css/font-awesome.css" rel="stylesheet" />
+
+
+    <link href="/lib/css/alertify.core.css" rel="stylesheet" />
+    <link href="/lib/css/alertify.bootstrap.css" rel="stylesheet" />
+
+
+    <!-- Set the base href -->
+   
+
+    <!-- 1. Load shim & polyfills for IE -->
+    <!-- IE required polyfills (from CDN), in this exact order -->
+    <![if !IE]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.0/es6-shim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.16/system-polyfills.js"></script>
+    <script src="https://npmcdn.com/angular2/es6/dev/src/testing/shims_for_IE.js"></script>   
+    <![endif]>
+
+    <!-- 1. Load shim & polyfills for ES6 -->
+    <script src="/lib/js/angular2-polyfills.js"></script>
+    <!--<script src="lib/js/es6-shim.js"></script>-->
+
+    <script src="/lib/js/system.src.js"></script>
+   
+     <script src="/lib/js/jquery.min.js"></script>
+
+    <script src="/lib/js/bootstrap.min.js"></script>
+
+    <script>
+        System.config({
+            map: {
+                'rxjs': 'lib/js/rxjs'
+            },
+            packages: {
+                'app': { defaultExtension: 'js' },
+                'rxjs': { defaultExtension: 'js' }
+            },
+            defaultJSExtensions: true,
+            baseURL: ''
+
+        });
+
+    </script>
+    <script src="/lib/js/angular2.dev.js"></script>
+    <script src="/lib/js/http.dev.js"></script>
+    <script src="/lib/js/router.dev.js"></script>
+
+    <script src="/lib/js/jquery.fancybox.pack.js"></script>
+    <script src="/lib/js/alertify.min.js"></script>
+
+
+</head>
+<body>
+    <seed-app>
+        <div class="cs-loader">
+            <div class="cs-loader-inner">
+                <label>	●</label>
+                <label>	●</label>
+                <label>	●</label>
+                <label>	●</label>
+                <label>	●</label>
+                <label>	●</label>
+            </div>
+        </div>
+    </seed-app>
+    <script type="text/javascript">
+
+    System.import('/lib/spa/app.js').catch(console.log.bind(console));
+    $(document).ready(function() {
+    $('.fancybox').fancybox();
+    });
+    </script>
+
+</body>
+</html>
