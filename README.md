@@ -13,9 +13,9 @@ Frameworks, IDE & plugins
 * Fancybox for login/registration modals
 * Automatic node package restore for client side libraries with Visual Studio 2015
 * Automatic bower package restore for client side libraries with Visual Studio 2015
-* gulp to compile typescript, minify, uglify, generate source maps for debugging typescipt on browser etc
+* Gulp to compile & transpile typescript to JavaScript, minify, uglify, generate source maps for debugging typescipt on browser etc
 * Task explorer to watch and compile typescript with gulp during development and during build process
-* System.Js as module loader with support for dynamic asynchronous on demand loading of js modules.
+* System.JS as JS module loader with support for dynamic asynchronous on demand loading of js modules.
 
 ![alt tag](https://raw.githubusercontent.com/justcoding121/AspNetCore-Angular2-Seed/master/screenshots/Capture.PNG)
 
