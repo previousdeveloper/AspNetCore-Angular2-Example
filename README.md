@@ -22,3 +22,4 @@ Frameworks, IDE & plugins
 * Automatic bower package restore for client side libraries with Visual Studio 2015
 * gulp to compile typescript, minify, uglify, generate source maps for debugging typescipt on browser etc
 * Task explorer to watch and compile typescript with gulp during development and during build process
+* System.Js as module loader with support for dynamic asynchronous on demand loading of js modules.
