@@ -31,3 +31,4 @@ Future updates
 * Seed multilevel rest style routing (for example user/{userId}/account/{accountid}
 * Seed multi-level side bar menu
 * Seed a paged grid
+* Seed authorization for child routes
