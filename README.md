@@ -25,5 +25,8 @@ Features
 * Angular 2 beta as a pure single page application with static typings using typescript for client side code.
 * Angular 2 PathLocationStrategy implemted with URL rewrite on server side. This will help to implement server side rendering for faster initial page loads in future.
 * Authentication seed
-
+Future updates
+=============
+* Seed multilevel rest style routing (for example user/{userId}/account/{accountid}
+* Seed multi-level side bar menu
 
