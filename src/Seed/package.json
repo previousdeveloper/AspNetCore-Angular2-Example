@@ -3,13 +3,19 @@
   "name": "seedapp",
   "private": true,
   "dependencies": {
-    "angular2": "2.0.0-beta.12",
+    "angular2": "2.0.0-beta.17",
     "systemjs": "0.19.9",
     "bootstrap": "3.3.5",
     "jquery": "2.1.4",
     "fancybox": "3.0.0"
   },
   "devDependencies": {
+    "http-server": "^0.8.5",
+    "jasmine": "2.3.2",
+    "karma": "^0.13.22",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-cli": "^0.0.4",
+    "karma-jasmine": "^0.3.6",
     "typescript": "1.8.2",
     "gulp": "3.9.0",
     "gulp-typescript": "2.9.2",

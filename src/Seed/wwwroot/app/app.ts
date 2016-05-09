@@ -4,10 +4,8 @@ import {provide, Component} from 'angular2/core';
 import {CORE_DIRECTIVES} from 'angular2/common';
 import {bootstrap} from 'angular2/platform/browser';
 import {HTTP_BINDINGS, HTTP_PROVIDERS, Headers, RequestOptions, BaseRequestOptions} from 'angular2/http';
-import {
-RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, APP_BASE_HREF,
-Location
-} from 'angular2/router';
+import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, ROUTER_BINDINGS} from 'angular2/router';
+import { Location, LocationStrategy, PathLocationStrategy } from 'angular2/platform/common';
 import 'rxjs/add/operator/map';
 import {enableProdMode} from 'angular2/core';
 
@@ -63,6 +61,6 @@ class AppBaseRequestOptions extends BaseRequestOptions {
 
 bootstrap(AppRoot, [HTTP_PROVIDERS, ROUTER_PROVIDERS,
     provide(RequestOptions, { useClass: AppBaseRequestOptions }),
-    provide(APP_BASE_HREF, { useValue: '/' }),
+    provide(LocationStrategy, { useClass: PathLocationStrategy }),
     DataService, MembershipService, UtilityService])
     .catch(err => console.error(err));
