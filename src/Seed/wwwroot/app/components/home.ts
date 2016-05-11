@@ -1,4 +1,5 @@
 ﻿import {Component} from 'angular2/core';
+import { MembershipService } from '../core/services/membershipService';
 
 @Component({
     selector: 'home',
@@ -7,7 +8,10 @@
 })
 export class Home {
 
-    constructor() {
+    constructor(public membershipService: MembershipService) {
 
+    }
+    isUserLoggedIn(): boolean {
+        return this.membershipService.isUserAuthenticated();
     }
 }
