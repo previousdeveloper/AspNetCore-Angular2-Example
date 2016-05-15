@@ -12,6 +12,9 @@
   },
   "exclude": [
     "node_modules",
-    "wwwroot"
+    "wwwroot",
+    "bower_components",
+    "typings/main",
+    "typings/main.d.ts"
   ]
 }

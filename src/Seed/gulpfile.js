@@ -19,6 +19,8 @@ var paths = {
     tsOutput: lib + 'spa/',
     tsDef: lib + 'definitions/',
     jsVendors: lib + 'js',
+    jsAngular: lib + 'js/@angular',
+    jsAngularWebApi: lib + 'js/angular2-in-memory-web-api',
     jsRxJSVendors: lib + 'js/rxjs',
     cssVendors: lib + 'css',
     imgVendors: lib + 'img',
@@ -28,29 +30,39 @@ var paths = {
 var tsProject = gp_typescript.createProject('./wwwroot/tsconfig.json');
 
 gulp.task('setup-vendors', function (done) {
+
     //js from node packages
     gulp.src([
-      'node_modules/angular2/bundles/angular2.dev.js',
-      'node_modules/angular2/bundles/http.dev.js',
-      'node_modules/angular2/bundles/router.dev.js',
-      'node_modules/es6-shim/es6-shim.js',
+      'node_modules/es6-shim/es6-shim.min.js',
+      'node_modules/zone.js/dist/zone.js',
+      'node_modules/reflect-metadata/Reflect.js',
       'node_modules/systemjs/dist/system.src.js',
-      'node_modules/angular2/bundles/angular2-polyfills.js',
+       'node_modules/es6-shim/es6-shim.min.js',
       'node_modules/jquery/dist/jquery.min.js',
       'node_modules/bootstrap/dist/js/bootstrap.min.js',
       'bower_components/alertify.js/lib/alertify.min.js',
       'node_modules/fancybox/dist/js/jquery.fancybox.pack.js'
     ]).pipe(gulp.dest(paths.jsVendors));
 
+    //@angular from node package
+    gulp.src([
+     'node_modules/@angular/**/*.js'
+    ]).pipe(gulp.dest(paths.jsAngular));
+
+    //@angular from node package
+    gulp.src([
+     'node_modules/angular2-in-memory-web-api/**/*.js'
+    ]).pipe(gulp.dest(paths.jsAngularWebApi));
+
     //rxjs from node package
     gulp.src([
      'node_modules/rxjs/**/*.js'
     ]).pipe(gulp.dest(paths.jsRxJSVendors));
 
-    //js from bower
-    gulp.src([
+    ////js from bower
+    //gulp.src([
 
-    ]).pipe(gulp.dest(paths.cssVendors));
+    //]).pipe(gulp.dest(paths.cssVendors));
 
     //css
     gulp.src([

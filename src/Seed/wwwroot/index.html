@@ -16,51 +16,27 @@
     <link href="/lib/css/alertify.core.css" rel="stylesheet" />
     <link href="/lib/css/alertify.bootstrap.css" rel="stylesheet" />
 
-
     <!-- Set the base href -->
-   
+  
+    <!-- 1. Load libraries -->
+    <!-- Polyfill(s) for older browsers -->
+    <script src="/lib/js/es6-shim.min.js"></script>
 
-    <!-- 1. Load shim & polyfills for IE -->
-    <!-- IE required polyfills (from CDN), in this exact order -->
-    <![if !IE]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-shim/0.35.0/es6-shim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/systemjs/0.19.16/system-polyfills.js"></script>
-    <script src="https://npmcdn.com/angular2/es6/dev/src/testing/shims_for_IE.js"></script>   
-    <![endif]>
-
-    <!-- 1. Load shim & polyfills for ES6 -->
-    <script src="/lib/js/angular2-polyfills.js"></script>
-    <!--<script src="lib/js/es6-shim.js"></script>-->
-
+    <script src="/lib/js/zone.js"></script>
+    <script src="/lib/js/Reflect.js"></script>
     <script src="/lib/js/system.src.js"></script>
-   
-     <script src="/lib/js/jquery.min.js"></script>
 
-    <script src="/lib/js/bootstrap.min.js"></script>
-
+    <!-- 2. Configure SystemJS -->
+    <script src="/system-config.js"></script>
     <script>
-        System.config({
-            map: {
-                'rxjs': 'lib/js/rxjs'
-            },
-            packages: {
-                'app': { defaultExtension: 'js' },
-                'rxjs': { defaultExtension: 'js' }
-            },
-            defaultJSExtensions: true,
-            baseURL: ''
-
-        });
-
+        System.import('app')
+            .catch(function (err) { console.error(err); });
     </script>
-    <script src="/lib/js/angular2.dev.js"></script>
-    <script src="/lib/js/http.dev.js"></script>
-    <script src="/lib/js/router.dev.js"></script>
 
+    <script src="/lib/js/jquery.min.js"></script>
+    <script src="/lib/js/bootstrap.min.js"></script>
     <script src="/lib/js/jquery.fancybox.pack.js"></script>
     <script src="/lib/js/alertify.min.js"></script>
-
-
 </head>
 <body>
     <seed-app>
@@ -77,7 +53,7 @@
     </seed-app>
     <script type="text/javascript">
 
-    System.import('/lib/spa/app.js').catch(console.log.bind(console));
+    System.import('app').catch(console.log.bind(console));
     $(document).ready(function() {
     $('.fancybox').fancybox();
     });

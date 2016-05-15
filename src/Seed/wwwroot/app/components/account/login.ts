@@ -1,6 +1,6 @@
-﻿import {Component} from 'angular2/core';
-import {CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/common';
-import {Router, RouterLink} from 'angular2/router';
+﻿import {Component, OnInit} from '@angular/core';
+import {CORE_DIRECTIVES, FORM_DIRECTIVES} from '@angular/common';
+import {Router, ROUTER_DIRECTIVES} from '@angular/router';
 import { AppRoutes, APP_ROUTES } from '../../routes';
 import { AccountRoutes, ACCOUNT_ROUTES } from './routes';
 import { User } from '../../core/domain/user';
@@ -13,9 +13,9 @@ import { NotificationService } from '../../core/services/notificationService';
     providers: [MembershipService, NotificationService],
     templateUrl: './app/components/account/login.html',
     bindings: [MembershipService, NotificationService],
-    directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, RouterLink]
+    directives: [CORE_DIRECTIVES, FORM_DIRECTIVES, ROUTER_DIRECTIVES]
 })
-export class Login {
+export class Login implements OnInit {
 
     private appRoutes = AppRoutes;
     private accountRoutes = AccountRoutes;
@@ -30,6 +30,10 @@ export class Login {
         this.router = router;
         this.accountRoutes = AccountRoutes;
         this.appRoutes = AppRoutes;
+    }
+
+    ngOnInit() {
+       
     }
 
     login(): void {

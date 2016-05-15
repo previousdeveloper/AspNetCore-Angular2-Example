@@ -1,4 +1,4 @@
-﻿import {Component} from 'angular2/core';
+﻿import {Component, OnInit} from '@angular/core';
 import { MembershipService } from '../core/services/membershipService';
 
 @Component({
@@ -6,11 +6,15 @@ import { MembershipService } from '../core/services/membershipService';
     templateUrl: './app/components/home.html',
     directives: []
 })
-export class Home {
+export class Home implements OnInit  {
 
     constructor(public membershipService: MembershipService) {
+    }
+
+    ngOnInit() {
 
     }
+
     isUserLoggedIn(): boolean {
         return this.membershipService.isUserAuthenticated();
     }

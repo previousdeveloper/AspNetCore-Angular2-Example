@@ -30,7 +30,9 @@
 
   "exclude": [
     "wwwroot",
-    "node_modules"
+    "node_modules",
+    "typings",
+    "bower_components"
   ],
   "publishExclude": [
     "**.user",

@@ -1,17 +1,18 @@
-﻿///<reference path="../../node_modules/angular2/typings/browser.d.ts"/>
-
-import {provide, Component} from 'angular2/core';
-import {CORE_DIRECTIVES} from 'angular2/common';
-import {bootstrap} from 'angular2/platform/browser';
-import {HTTP_BINDINGS, HTTP_PROVIDERS, Headers, RequestOptions, BaseRequestOptions} from 'angular2/http';
-import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS, ROUTER_BINDINGS} from 'angular2/router';
-import { Location, LocationStrategy, PathLocationStrategy } from 'angular2/platform/common';
+﻿/// <reference path="../../typings/browser.d.ts"/>
+import {bootstrap} from '@angular/platform-browser-dynamic';
+import {provide, Component, OnInit } from '@angular/core';
+import {CORE_DIRECTIVES, APP_BASE_HREF} from '@angular/common';
+import {HTTP_BINDINGS, HTTP_PROVIDERS, Headers, RequestOptions, BaseRequestOptions} from '@angular/http';
+import { ROUTER_PROVIDERS} from '@angular/router';
+// Add these symbols to override the `LocationStrategy`
+import { LocationStrategy,
+    PathLocationStrategy } from '@angular/common';
 import 'rxjs/add/operator/map';
-import {enableProdMode} from 'angular2/core';
+import {enableProdMode} from '@angular/core';
 
 enableProdMode();
 import { AppRoutes, APP_ROUTES } from './routes';
-
+import { Routes, Router, ROUTER_DIRECTIVES } from '@angular/router';
 import { DataService } from './core/services/dataService';
 import { MembershipService } from './core/services/membershipService';
 import { UtilityService } from './core/services/utilityService';
@@ -22,12 +23,16 @@ import { User } from './core/domain/user';
     templateUrl: './app/app.html',
     directives: [ROUTER_DIRECTIVES, CORE_DIRECTIVES]
 })
-@RouteConfig(APP_ROUTES)
-export class AppRoot {
+@Routes(APP_ROUTES)
+export class AppRoot implements OnInit{
     private routes = AppRoutes;
 
-    constructor(public membershipService: MembershipService, location: Location) {
+    constructor(public membershipService: MembershipService, private router: Router) {
         this.routes = AppRoutes;
+    }
+
+    ngOnInit() {
+        this.router.navigate(['/']);
     }
 
     isUserLoggedIn(): boolean {
