@@ -1,8 +1,5 @@
 This project would help AspNet developers to jump start with a blank Angular application with login/registration support.
 
-This is forked from the wonderfull work by [chasakell] (https://github.com/chsakell/aspnet5-angular2-typescript) fixing bugs and removing EF 7 dependency.
-
-
 Frameworks, IDE & plugins
 ====================
 * Visual studio 2015
