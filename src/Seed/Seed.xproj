@@ -6,14 +6,20 @@
   </PropertyGroup>
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
-    <ProjectGuid>8b0d69bb-07dc-4c5f-a095-ed45e025c32b</ProjectGuid>
-    <RootNamespace>TestApp</RootNamespace>
-    <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">..\..\artifacts\obj\$(MSBuildProjectName)</BaseIntermediateOutputPath>
-    <OutputPath Condition="'$(OutputPath)'=='' ">..\..\artifacts\bin\$(MSBuildProjectName)\</OutputPath>
+    <ProjectGuid>f961561d-6cff-4c27-ba42-7c6baf9e7eee</ProjectGuid>
+    <RootNamespace>SeedA</RootNamespace>
+    <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">..\artifacts\obj\$(MSBuildProjectName)</BaseIntermediateOutputPath>
+    <OutputPath Condition="'$(OutputPath)'=='' ">..\artifacts\bin\$(MSBuildProjectName)\</OutputPath>
   </PropertyGroup>
   <PropertyGroup>
     <SchemaVersion>2.0</SchemaVersion>
+    <ApplicationInsightsResourceId>/subscriptions/931b9c50-1f98-4ae9-bddf-b505a865d449/resourcegroups/Default-ApplicationInsights-CentralUS/providers/microsoft.insights/components/SeedA</ApplicationInsightsResourceId>
     <TypeScriptCompileBlocked>True</TypeScriptCompileBlocked>
   </PropertyGroup>
+  <ItemGroup>
+    <DnxInvisibleFolder Include="bower_components\" />
+    <DnxInvisibleFolder Include="typings\" />
+    <DnxInvisibleFolder Include="wwwroot\lib\" />
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\DNX\Microsoft.DNX.targets" Condition="'$(VSToolsPath)' != ''" />
 </Project>

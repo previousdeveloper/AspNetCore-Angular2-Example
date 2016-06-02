@@ -1,5 +1,8 @@
 This project would help AspNet developers to jump start with a blank Angular application with login/registration support.
 
+* [Live Preview](http://seeda20160601032411.azurewebsites.net/account/login)
+
+
 Frameworks, IDE & plugins
 ====================
 * Visual studio 2015

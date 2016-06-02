@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using TestApp.Infrastructure.Middleware;
 
-namespace TestApp
+namespace SeedA
 {
     public class Startup
     {
@@ -59,13 +59,11 @@ namespace TestApp
 
             app.UseStaticFiles();
 
-
             app.UseCookieAuthentication(options =>
             {
                 options.AutomaticAuthenticate = true;
                 options.AutomaticChallenge = false;
             });
-
 
 
             app.UseMvc();

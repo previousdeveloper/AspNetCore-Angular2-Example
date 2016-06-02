@@ -31,8 +31,8 @@
   "exclude": [
     "wwwroot",
     "node_modules",
-    "typings",
-    "bower_components"
+    "bower_components",
+    "typings"
   ],
   "publishExclude": [
     "**.user",
