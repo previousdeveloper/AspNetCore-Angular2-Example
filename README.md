@@ -12,7 +12,7 @@ Frameworks, IDE & plugins
 * Fancybox for login/registration modals
 * Automatic node package restore for client side libraries with Visual Studio 2015
 * Automatic bower package restore for client side libraries with Visual Studio 2015
-* Gulp to compile & transpile typescript to JavaScript, minify, uglify, generate source maps for debugging typescipt on browser etc
+* Gulp to compile & transpile typescript to JavaScript, rename, uglify, generate source maps for debugging typescipt on browser etc
 * Task explorer to watch and compile typescript with gulp during development and during build process
 * System.JS as JS module loader with support for on demand asynchronous loading of js modules.
 
