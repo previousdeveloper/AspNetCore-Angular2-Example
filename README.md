@@ -5,7 +5,7 @@ This project would help AspNet developers to jump start with a blank Angular app
 Frameworks, IDE & plugins
 ====================
 * Visual studio 2015
-* Angular 2 beta
+* Angular 2 RC 1
 * AspNetCore (aka Asp Net 5 or vNext) which targets both .Net Core & .Net 4.5.1
 * Bootstrap 3
 * Alertify for notifications
@@ -14,7 +14,7 @@ Frameworks, IDE & plugins
 * Automatic bower package restore for client side libraries with Visual Studio 2015
 * Gulp to compile & transpile typescript to JavaScript, rename, uglify, generate source maps for debugging typescipt on browser etc
 * Task explorer to watch and compile typescript with gulp during development and during build process
-* System.JS as JS module loader with support for on demand asynchronous loading of js modules.
+* System.JS as JS module loader with support for an on demand asynchronous loading of js modules.
 
 <img src="https://raw.githubusercontent.com/justcoding121/AspNetCore-Angular2-Seed/master/screenshots/login.PNG" width="800px">
 <img src="https://raw.githubusercontent.com/justcoding121/AspNetCore-Angular2-Seed/master/screenshots/home.PNG" width="800px">
@@ -22,7 +22,7 @@ Frameworks, IDE & plugins
 Features
 =======
 * AspNetCore (aka Asp Net 5 or vNext) as server side framework with purely REST services (JSON)
-* Angular 2 beta as a pure single page application with static typings using typescript for client side code.
+* Angular 2 beta as a pure Single Page Application (SPA) with static typings using typescript for client side code.
 * Angular 2 PathLocationStrategy implemented with URL rewrite on server side. This will help to implement server side rendering for faster initial page loads in future.
 * Cookie authentication seed for login/logout/registration
 
