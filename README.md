@@ -30,7 +30,7 @@ Future updates
 =============
 * Add karma/jasmine test runner suite for client side code
 * Add server side unit testing (using xunit) along with integration testing (using Microsoft.AspNet.TestHost) 
-* Use scss along with gulp compile
+* Use SCSS along with gulp compile to CSS
 * Seed multilevel rest style routing (for example user/{userId}/account/{accountid}
 * Seed multi-level side bar menu
 * Seed a paged grid
