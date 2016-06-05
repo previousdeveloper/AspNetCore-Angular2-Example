@@ -14,9 +14,10 @@ Frameworks, IDE & plugins
 * Automatic bower package restore for client side libraries with Visual Studio 2015
 * Gulp to compile & transpile typescript to JavaScript, minify, uglify, generate source maps for debugging typescipt on browser etc
 * Task explorer to watch and compile typescript with gulp during development and during build process
-* System.JS as JS module loader with support for dynamic asynchronous on demand loading of js modules.
+* System.JS as JS module loader with support for on demand asynchronous loading of js modules.
 
-![alt tag](https://raw.githubusercontent.com/justcoding121/AspNetCore-Angular2-Seed/master/screenshots/Capture.PNG)
+<img src="https://raw.githubusercontent.com/justcoding121/AspNetCore-Angular2-Seed/master/screenshots/login.PNG" width="800px">
+<img src="https://raw.githubusercontent.com/justcoding121/AspNetCore-Angular2-Seed/master/screenshots/home.PNG" width="800px">
 
 Features
 =======
@@ -27,6 +28,8 @@ Features
 
 Future updates
 =============
+* Add karma/jasmine test runner suite for client side code
+* Add server side unit testing (using xunit) along with integration testing (using Microsoft.AspNet.TestHost) 
 * Seed multilevel rest style routing (for example user/{userId}/account/{accountid}
 * Seed multi-level side bar menu
 * Seed a paged grid

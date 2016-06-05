@@ -1,4 +1,4 @@
-/// <binding BeforeBuild='build-spa' Clean='clean-lib' ProjectOpened='build-spa, watch' />
+/// <binding BeforeBuild='clean-lib, build-spa' Clean='clean-lib' ProjectOpened='clean-lib, build-spa, watch' />
 var gulp = require('gulp'),
     merge = require('merge'),
     fs = require("fs"),
@@ -33,16 +33,28 @@ gulp.task('setup-vendors', function (done) {
 
     //js from node packages
     gulp.src([
+    'node_modules/zone.js/dist/zone.js',
+    'node_modules/reflect-metadata/Reflect.js',
+    'node_modules/systemjs/dist/system.src.js',
+    'node_modules/fancybox/dist/js/jquery.fancybox.pack.js'
+    ])
+
+        .pipe(gp_uglify())
+        .pipe(gp_rename({
+            suffix: '.min'
+        }))
+        .pipe(gulp.dest(paths.jsVendors));
+
+    //js from node packages
+    gulp.src([
       'node_modules/es6-shim/es6-shim.min.js',
-      'node_modules/zone.js/dist/zone.js',
-      'node_modules/reflect-metadata/Reflect.js',
-      'node_modules/systemjs/dist/system.src.js',
-       'node_modules/es6-shim/es6-shim.min.js',
+      'node_modules/es6-shim/es6-shim.min.js',
       'node_modules/jquery/dist/jquery.min.js',
       'node_modules/bootstrap/dist/js/bootstrap.min.js',
-      'bower_components/alertify.js/lib/alertify.min.js',
-      'node_modules/fancybox/dist/js/jquery.fancybox.pack.js'
-    ]).pipe(gulp.dest(paths.jsVendors));
+      'bower_components/alertify.js/lib/alertify.min.js'
+
+    ])
+        .pipe(gulp.dest(paths.jsVendors));
 
     //@angular from node package
     gulp.src([
@@ -52,12 +64,16 @@ gulp.task('setup-vendors', function (done) {
     //@angular from node package
     gulp.src([
      'node_modules/angular2-in-memory-web-api/**/*.js'
-    ]).pipe(gulp.dest(paths.jsAngularWebApi));
+    ])
+        .pipe(gp_uglify())
+        .pipe(gulp.dest(paths.jsAngularWebApi));
 
     //rxjs from node package
     gulp.src([
      'node_modules/rxjs/**/*.js'
-    ]).pipe(gulp.dest(paths.jsRxJSVendors));
+    ])
+        .pipe(gp_uglify())
+        .pipe(gulp.dest(paths.jsRxJSVendors));
 
     ////js from bower
     //gulp.src([
