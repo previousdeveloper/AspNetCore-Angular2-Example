@@ -1,6 +1,6 @@
 This project would help AspNet developers to jump start with a blank Angular application with login/registration support.
 
-<a href="http://aancseed.azurewebsites.net/account/login" target="_blank">LIVE DEMO</a>
+<a href="http://aancseed.azurewebsites.net/account/login" target="_blank"><b>LIVE DEMO</b></a>
 
 Frameworks, IDE & plugins
 ====================
