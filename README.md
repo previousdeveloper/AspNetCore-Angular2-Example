@@ -36,3 +36,4 @@ Future updates
 * Seed a paged grid
 * Seed authorization for child routes
 * Bundle minified Angular2/Rx files when stable version is released
+* Demonstrate real-time notifications using SignalR
